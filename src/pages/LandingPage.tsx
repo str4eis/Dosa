@@ -25,8 +25,6 @@ export default function LandingPage() {
         <div className="container header-inner">
           <Logo />
           <nav aria-label="Navegação principal">
-            <a href="#como-funciona">Como funciona</a>
-            <a href="#como-funciona">Para famílias</a>
           </nav>
           <div className="header-actions">
             <Button to="/login" variant="ghost" ariaLabel="Entrar na DOSA">
@@ -119,7 +117,6 @@ export default function LandingPage() {
                   Botões grandes, linguagem clara e somente a dose do momento em
                   destaque.
                 </p>
-                <Link to="/cadastro?perfil=patient">Sou Paciente</Link>
               </Card>
               <Card className="feature-card">
                 <Users />
@@ -128,7 +125,6 @@ export default function LandingPage() {
                   Acompanhe horários, confirmações e alertas importantes em
                   tempo real.
                 </p>
-                <Link to="/cadastro?perfil=caregiver">Sou Cuidador</Link>
               </Card>
               <Card className="feature-card">
                 <QrCode />
@@ -137,7 +133,6 @@ export default function LandingPage() {
                   Relatórios organizados para compartilhar nas consultas e
                   conexão por código.
                 </p>
-                <Link to="/cuidador/ajustes">Ver relatórios</Link>
               </Card>
             </div>
           </div>
