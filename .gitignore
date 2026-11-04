@@ -1,0 +1,27 @@
+# Logs e Dependências
+node_modules
+.pnpm-store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Builds de produção
+dist
+dist-ssr
+*.local
+
+# Configurações de Editores e Ferramentas
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Metadados de prototipagem
+.figma
+.env
+.env.local
+.DS_Store
