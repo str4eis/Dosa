@@ -12,6 +12,7 @@ import {
 import { Button, Card, Logo, StatusBadge } from "../components/UI"
 import PatientNavigation from "../components/PatientNavigation"
 import { useMedication } from "../context/MedicationContext"
+import { getMedicationIcon } from "../utils/medicationIcons"
 
 export default function PatientHome() {
   const { confirmDose, postponeDose, medications, activePatient } =
@@ -21,6 +22,7 @@ export default function PatientHome() {
       (medication) =>
         medication.patientId === activePatient.id && medication.id === 1,
     ) ?? medications[0]
+  const MedicationIcon = getMedicationIcon(currentDose.name, currentDose.dosage)
   const doseConfirmed = currentDose.status === "confirmed"
   const nextDose = medications.find(
     (medication) =>
@@ -70,12 +72,9 @@ export default function PatientHome() {
           </div>
           <div className="dose-identification">
             <div className="dose-photo">
-              <img
-                src="/assets/f3c39.png"
-                alt="Losartana sobre uma bandeja com um copo de água"
-              />
-              <span>1 comprimido</span>
+              <MedicationIcon aria-hidden="true" />
             </div>
+            <span className="dose-quantity">1 comprimido</span>
             <small>Pressão arterial</small>
             <h2>Losartana 50mg</h2>
             <strong>1 comprimido com água</strong>

@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Siren,
   Type,
+  UserRound,
   Volume2,
 } from "lucide-react"
 import { Button, Card, Logo, StatusBadge } from "../components/UI"
@@ -81,7 +82,9 @@ export default function PatientSettings() {
           </div>
         </div>
         <Card className="patient-identity" accent="brand">
-          <img src="/assets/ad07d.png" alt="Foto de Seu Antônio Silva" />
+          <span className="patient-avatar-icon" aria-hidden="true">
+            <UserRound />
+          </span>
           <h2>
             Seu Antônio Silva <StatusBadge status="info">82 anos</StatusBadge>
           </h2>

@@ -24,7 +24,6 @@ export interface Medication {
   period: string
   instruction: string
   status: MedicationStatus
-  image?: string
   confirmedAt?: string
 }
 
@@ -106,7 +105,6 @@ const initialMedications: Medication[] = [
     period: "Manhã",
     instruction: "Tomar logo após o café da manhã",
     status: "next",
-    image: "/assets/c7da3.png",
   },
   {
     id: 2,
@@ -117,7 +115,6 @@ const initialMedications: Medication[] = [
     period: "Tarde",
     instruction: "Tomar 30 min antes do almoço",
     status: "next",
-    image: "/assets/f24f6.png",
   },
   {
     id: 3,
@@ -128,7 +125,6 @@ const initialMedications: Medication[] = [
     period: "Noite",
     instruction: "Tomar após o jantar",
     status: "low",
-    image: "/assets/f28f6.png",
   },
   {
     id: 4,

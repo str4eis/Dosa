@@ -1,5 +1,6 @@
-import { AlertTriangle, CheckCircle2, Clock3, Pill } from "lucide-react"
+import { AlertTriangle, CheckCircle2, Clock3 } from "lucide-react"
 import type { Medication } from "../context/MedicationContext"
+import { getMedicationIcon } from "../utils/medicationIcons"
 import { Button, Card, StatusBadge } from "./UI"
 
 export default function MedicationCard({
@@ -8,6 +9,7 @@ export default function MedicationCard({
   medication: Medication
 }) {
   const effectiveStatus = medication.status
+  const MedicationIcon = getMedicationIcon(medication.name, medication.dosage)
   return (
     <Card
       accent={
@@ -26,14 +28,7 @@ export default function MedicationCard({
       <div className="medication-body">
         <div className="medication-heading">
           <div className="medicine-image">
-            {medication.image ? (
-              <img
-                src={medication.image}
-                alt={`Embalagem de ${medication.name}`}
-              />
-            ) : (
-              <Pill aria-hidden="true" />
-            )}
+              <MedicationIcon aria-hidden="true" />
           </div>
           <div>
             <h3>
